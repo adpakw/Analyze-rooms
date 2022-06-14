@@ -258,15 +258,15 @@ def add_menu():
     global obs3
     obser = IntVar()
     obser.set(2)
-    obs1 = Radiobutton(main_window, text='Да, защищено', variable=obser, value=0, bg='lightgrey')
-    obs2 = Radiobutton(main_window, text='Да, не защищено', variable=obser, value=1, bg='lightgrey')
+    obs1 = Radiobutton(main_window, text='Да, под наблюдением защищенного устройства', variable=obser, value=0, bg='lightgrey')
+    obs2 = Radiobutton(main_window, text='Да, под наблюдением незащищенного устройства', variable=obser, value=1, bg='lightgrey')
     obs3 = Radiobutton(main_window, text='Нет', variable=obser, value=2, bg='lightgrey')
     obs1.place(x=15, y=180)
-    obs2.place(x=130, y=180)
-    obs3.place(x=260, y=180)
+    obs2.place(x=15, y=200)
+    obs3.place(x=15, y=220)
     global access
     access = Label(main_window, text='Ограничен ли доступ для 3-х лиц?', font=('Arial', 10), bg='lightgrey')
-    access.place(x=15, y=205)
+    access.place(x=15, y=245)
     global acs
     global acs1
     global acs2
@@ -274,14 +274,14 @@ def add_menu():
     acs = IntVar()
     acs.set(2)
     acs1 = Radiobutton(main_window, text='Да', variable=acs, value=0, bg='lightgrey')
-    acs2 = Radiobutton(main_window, text='Нет, непроверенные', variable=acs, value=1, bg='lightgrey')
-    acs3 = Radiobutton(main_window, text='Нет, проверенные', variable=acs, value=2, bg='lightgrey')
-    acs1.place(x=15, y=227)
-    acs2.place(x=55, y=227)
-    acs3.place(x=200, y=227)
+    acs2 = Radiobutton(main_window, text='Неограничен', variable=acs, value=1, bg='lightgrey')
+    acs3 = Radiobutton(main_window, text='Не ограничен только для проверенных', variable=acs, value=2, bg='lightgrey')
+    acs1.place(x=15, y=265)
+    acs2.place(x=15, y=285)
+    acs3.place(x=15, y=305)
     global renovation
     renovation = Label(main_window, text='Был ли недавно ремонт?', font=('Arial', 10), bg='lightgrey')
-    renovation.place(x=15, y=255)
+    renovation.place(x=15, y=330)
     global ren
     global ren1
     global ren2
@@ -291,18 +291,18 @@ def add_menu():
     ren1 = Radiobutton(main_window, text='Да, надежный персонал', variable=ren, value=0, bg='lightgrey')
     ren2 = Radiobutton(main_window, text='Да, ненадежный персонал', variable=ren, value=1, bg='lightgrey')
     ren3 = Radiobutton(main_window, text='Нет', variable=ren, value=2, bg='lightgrey')
-    ren1.place(x=15, y=275)
-    ren2.place(x=180, y=275)
-    ren3.place(x=350, y=275)
+    ren1.place(x=15, y=350)
+    ren2.place(x=180, y=350)
+    ren3.place(x=350, y=350)
     global interference
     interference = Label(main_window, text='Уровень помех:', font=('Arial', 10), bg='lightgrey')
-    interference.place(x=15, y=305)
+    interference.place(x=15, y=375)
     global infr
     infr = Entry(main_window, width=5)
-    infr.place(x=115, y=305)
+    infr.place(x=115, y=375)
     global walls
     walls = Label(main_window, text='Тонкие стенки?', font=('Arial', 10), bg='lightgrey')
-    walls.place(x=15, y=330)
+    walls.place(x=15, y=400)
     global wall
     global wall1
     global wall2
@@ -310,11 +310,11 @@ def add_menu():
     wall.set(False)
     wall1 = Radiobutton(main_window, text='Да', variable=wall, value=True, bg='lightgrey')
     wall2 = Radiobutton(main_window, text='Нет', variable=wall, value=False, bg='lightgrey')
-    wall1.place(x=15, y=350)
-    wall2.place(x=55, y=350)
+    wall1.place(x=15, y=420)
+    wall2.place(x=55, y=420)
     global neighbors
     neighbors = Label(main_window, text='Под контролем ли соседние помещения?', font=('Arial', 10), bg='lightgrey')
-    neighbors.place(x=15, y=375)
+    neighbors.place(x=15, y=445)
     global nbr
     global nbr1
     global nbr2
@@ -322,11 +322,11 @@ def add_menu():
     nbr.set(False)
     nbr1 = Radiobutton(main_window, text='Да', variable=nbr, value=True, bg='lightgrey')
     nbr2 = Radiobutton(main_window, text='Нет', variable=nbr, value=False, bg='lightgrey')
-    nbr1.place(x=15, y=400)
-    nbr2.place(x=55, y=400)
+    nbr1.place(x=15, y=465)
+    nbr2.place(x=55, y=465)
     global checks
     checks = Label(main_window, text='Происходят ли периодические проверки?', font=('Arial', 10), bg='lightgrey')
-    checks.place(x=15, y=425)
+    checks.place(x=15, y=490)
     global chk
     global chk1
     global chk2
@@ -334,11 +334,11 @@ def add_menu():
     chk.set(False)
     chk1 = Radiobutton(main_window, text='Да', variable=chk, value=True, bg='lightgrey')
     chk2 = Radiobutton(main_window, text='Нет', variable=chk, value=False, bg='lightgrey')
-    chk1.place(x=15, y=450)
-    chk2.place(x=55, y=450)
+    chk1.place(x=15, y=510)
+    chk2.place(x=55, y=510)
     global full_check
     full_check = Label(main_window, text='Производилась ли полная проверка?', font=('Arial', 10), bg='lightgrey')
-    full_check.place(x=15, y=475)
+    full_check.place(x=15, y=535)
     global fcheck
     global fcheck1
     global fcheck2
@@ -346,17 +346,17 @@ def add_menu():
     fcheck.set(False)
     fcheck1 = Radiobutton(main_window, text='Да', variable=fcheck, value=True, bg='lightgrey')
     fcheck2 = Radiobutton(main_window, text='Нет', variable=fcheck, value=False, bg='lightgrey')
-    fcheck1.place(x=15, y=495)
-    fcheck2.place(x=55, y=495)
+    fcheck1.place(x=15, y=555)
+    fcheck2.place(x=55, y=555)
     global volume
     volume = Label(main_window, text='Уровень речевого сигнала:', font=('Arial', 10), bg='lightgrey')
-    volume.place(x=15, y=520)
+    volume.place(x=15, y=580)
     global vol
     vol = Entry(main_window, width=15)
-    vol.place(x=200, y=520)
+    vol.place(x=185, y=580)
     global add_room_button
     add_room_button = Button(main_window, text='Добавить помещение', command=add)
-    add_room_button.place(x=15, y=555)
+    add_room_button.place(x=15, y=610)
 
 
 
